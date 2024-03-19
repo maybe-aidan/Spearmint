@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include "Spearmint/Application.h"
+#include "Spearmint/Log.h"
 
 // -- Entry Point ------------------------
 #include "Spearmint/EntryPoint.h"

@@ -1,0 +1,3 @@
+[submodule "Spearmint/vendor/spdlog"]
+	path = Spearmint/vendor/spdlog
+	url = https://github.com/gabime/spdlog
