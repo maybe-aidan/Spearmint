@@ -1,3 +1,6 @@
 [submodule "Spearmint/vendor/spdlog"]
 	path = Spearmint/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Spearmint/vendor/glfw"]
+	path = Spearmint/vendor/glfw
+	url = https://github.com/maybe-aidan/glfw.git

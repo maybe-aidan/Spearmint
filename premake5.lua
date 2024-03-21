@@ -10,6 +10,12 @@ workspace "Spearmint"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}" 
 
+-- Include Directories relatove to root folder
+IncludeDir = {}
+IncludeDir["GLFW"] = "Spearmint/vendor/GLFW/include"
+
+include "Spearmint/vendor/GLFW"
+
 project "Spearmint"
     location "Spearmint"
     kind "SharedLib"
@@ -17,6 +23,9 @@ project "Spearmint"
 
     targetdir ("bin/"..outputdir.."/%{prj.name}")
     objdir ("bin-int/"..outputdir.."/%{prj.name}")
+
+    pchheader "smpch.h"
+    pchsource "Spearmint/src/smpch.cpp"
 
     files
     {
@@ -26,7 +35,16 @@ project "Spearmint"
 
     includedirs
     {
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/src",
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib",
+        "dwmapi.lib"
     }
 
     filter "system:windows"

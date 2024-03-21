@@ -7,9 +7,9 @@ extern Spearmint::Application* Spearmint::CreateApplication();
 
 int main(int argc, char** argv) {
 	Spearmint::Log::Init();
-	SM_CORE_WARN("Initialized Log!");
-	int a = 5;
-	SM_INFO("Hello! Var={0}", a);
+	SM_CORE_WARN("Initialized Log!"); // Debug Testing
+	int a = 5;                        // Testing
+	SM_INFO("Hello! Var={0}", a);     // Testing
 
 	auto app = Spearmint::CreateApplication();
 	app->Run();
@@ -17,6 +17,6 @@ int main(int argc, char** argv) {
 
 }
 
-#endif
+#endif // SM_PLATFORM_WINDOWS
 
-#endif
+#endif // ENTRY_POINT_H

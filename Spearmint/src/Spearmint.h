@@ -3,9 +3,9 @@
 
 // For use by Spearmint applications
 
-#include <stdio.h>
-#include "Spearmint/Application.h"
 #include "Spearmint/Log.h"
+#include "Spearmint/Application.h"
+
 
 // -- Entry Point ------------------------
 #include "Spearmint/EntryPoint.h"

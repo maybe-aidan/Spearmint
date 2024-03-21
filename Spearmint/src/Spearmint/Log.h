@@ -1,9 +1,9 @@
 #ifndef LOG_H
 #define LOG_H
 
-#include <memory>
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Spearmint {
 	class SPEARMINT_API Log
@@ -38,4 +38,4 @@ namespace Spearmint {
 #define SM_TRACE(...)          ::Spearmint::Log::GetClientLogger()->trace(__VA_ARGS__)
 
 
-#endif
+#endif // LOG_H

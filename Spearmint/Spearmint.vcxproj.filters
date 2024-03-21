@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Spearmint">
       <UniqueIdentifier>{98298D5C-0494-41D3-4DD2-F278B97B1F28}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Spearmint\Events">
+      <UniqueIdentifier>{7C1A91B9-6813-B00B-9145-95907D9D8F17}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Spearmint.h" />
     <ClInclude Include="src\Spearmint\Application.h">
       <Filter>Spearmint</Filter>
@@ -16,16 +28,36 @@
     <ClInclude Include="src\Spearmint\EntryPoint.h">
       <Filter>Spearmint</Filter>
     </ClInclude>
+    <ClInclude Include="src\Spearmint\Events\ApplicationEvent.h">
+      <Filter>Spearmint\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Spearmint\Events\Event.h">
+      <Filter>Spearmint\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Spearmint\Events\KeyEvent.h">
+      <Filter>Spearmint\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Spearmint\Events\MouseEvent.h">
+      <Filter>Spearmint\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Spearmint\Log.h">
       <Filter>Spearmint</Filter>
     </ClInclude>
+    <ClInclude Include="src\Spearmint\Window.h">
+      <Filter>Spearmint</Filter>
+    </ClInclude>
+    <ClInclude Include="src\smpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Spearmint\Application.cpp">
       <Filter>Spearmint</Filter>
     </ClCompile>
     <ClCompile Include="src\Spearmint\Log.cpp">
       <Filter>Spearmint</Filter>
     </ClCompile>
+    <ClCompile Include="src\smpch.cpp" />
   </ItemGroup>
 </Project>

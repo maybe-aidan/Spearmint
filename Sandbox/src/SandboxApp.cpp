@@ -8,7 +8,6 @@ public:
 	~Sandbox() {
 
 	}
-
 };
 
 Spearmint::Application* Spearmint::CreateApplication() {
